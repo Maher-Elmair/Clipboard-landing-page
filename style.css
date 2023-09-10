@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+/* start Variables */
+
+:root {
+    --color-button-ios: #26BBA5;
+    --color-button-mac: #6174ff;
+    --color-normal-one: white;
+    --color-mian-two-: #f2f2f2;
+    --color-heading-there: #333;
+    --color--subheading-four: #888;
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    width: 10px;
+    background: var(--color-mian-two-);
+    border-left: 0 solid var(--color-normal-one);
+    border-right: 0 solid var(--color-normal-one);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-button-ios);
+    width: 15% !important;
+    height: 15% !important;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar:hover {
+    cursor: pointer;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-mian-two-);
+    background-color: var(--color-button-ios);
+}
+
+::selection {
+    color: var(--color-mian-two-);
+    background-color: var(--color-button-ios);
+}
+
+@media screen and (max-width:400px) {
+    :root {
+        background-image: url(images/bg-header-mobile.png);
+    }
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+
+}
+
+/* End Global Rules */
+/* Start Components */
+.button {
+    margin: 2% auto;
+    text-align: center;
+}
+
+.ios,
+.mac {
+    border: none;
+    color: var(--color-normal-one);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    font-family: 'Bai Jamjuree';
+    padding: 18px 30px;
+    border-radius: 50px;
+    margin: 4% 0.5%;
+}
+
+.ios {
+    background-color: var(--color-button-ios, #26BBA5);
+    box-shadow: 0px 15px 50px -10px var(--color-button-ios);
+}
+
+.mac {
+    background-color: var(--color-button-mac, #6174ff);
+    box-shadow: 0px 15px 50px -10px var(--color-button-mac);
+}
+
+.ios:hover,
+.mac:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* =-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+.special {
+    display: block;
+    text-align: center;
+    margin: 0px 0;
+}
+
+.special-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-heading-there);
+}
+
+.special-heading+p {
+    font-size: 16px;
+    color: var(--color--subheading-four);
+    margin-top: 20px;
+    width: 48%;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+@media screen and (max-width:840px) {
+    .special-heading {
+        font-size: 25px;
+    }
+
+    .special-heading+p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .special-heading+p {
+        width: 95%;
+    }
+
+    .button {
+        margin: 10% auto;
+    }
+
+}
+
+/* End Components */
+/* start header  */
+
+.header {
+    padding: 100px 0;
+}
+
+.header_content {
+    text-align: center;
+    display: block;
+}
+
+.header_text_first {
+    color: var(--color-heading-there);
+    font-size: 40px;
+    font-weight: 600;
+    padding: 40px 0px 20px 0px;
+}
+
+.header_text_second {
+    font-size: 18px;
+    color: var(--color--subheading-four);
+    width: 55%;
+    display: inline-flex;
+    align-items: center;
+}
+
+@media screen and (max-width:375px) {
+    .header_text_first {
+        font-size: 30px;
+        padding: 40px 0px 20px 0px;
+    }
+
+    .header_text_second {
+        width: 90%;
+    }
+}
+
+/* end header  */
+/* Start Landing */
+.landing_content {
+    display: flex;
+    margin: 100px 0;
+}
+
+.image_computer {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    left: -100px;
+}
+
+.landing_text {
+    display: block;
+    margin: 30px 0;
+}
+
+.text {
+    margin: 30px 0;
+
+}
+
+.landing_text_first {
+    color: var(--color-heading-there);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.landing_text_second {
+    color: var(--color--subheading-four);
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%;
+}
+
+@media screen and (max-width:990px) {
+    .landing_text {
+        margin: -40px 0;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .landing_content {
+        display: block;
+        text-align: center;
+    }
+
+    .landing_text {
+        margin: 30px 0;
+
+    }
+
+    .image_computer {
+        left: 0;
+        width: 90%;
+    }
+
+    .landing_text_second {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+}
+
+/* end Landing */
+/* start services */
+.image_devices {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+}
+
+/* end services */
+/* start workflow */
+.workflow_you {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 60px 20px;
+    margin: 50px auto;
+}
+
+.first_icon {
+    margin: 30px;
+}
+
+.workflow_text_first {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-heading-there);
+    line-height: 3;
+}
+
+.workflow_text_second {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color--subheading-four);
+    line-height: 1.5;
+}
+
+.workflow_icon {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 60px 20px;
+    margin: 100px auto 100px;
+}
+
+@media screen and (max-width:330px) {
+    .workflow_you {
+        grid-template-columns: initial;
+    }
+}
+
+/* end workflow */
+/* start footer */
+.footer {
+    background-color: var(--color-mian-two-);
+    margin-top: 100px;
+    padding: 30px 30px 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+.footer_logo {
+    width: 60px;
+}
+
+.footer_text {
+    display: block;
+    margin-left: -30%;
+}
+
+.footer_text_first {
+    display: flex;
+    gap: 50px 50px;
+    margin-bottom: 20px;
+}
+
+.footer_text_second {
+    display: flex;
+    gap: 50px 50px;
+}
+
+.link {
+    /* margin: 0 60px; */
+    list-style-type: none;
+    display: flex;
+
+}
+
+.footer_icon span i {
+    margin: 0 10px;
+    font-size: 25px;
+    color: var(--color-heading-there);
+
+}
+
+.link:hover,
+.footer_icon span i:hover {
+    color: var(--color-button-ios);
+    cursor: pointer;
+}
+
+/*! start Attribution */
+.attribution {
+    position: absolute;
+    bottom: 0rem;
+    width: -webkit-fill-available;
+    color: var(--color--subheading-four);
+    font-size: 16px;
+    font-weight: 800;
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+}
+
+.attribution a {
+    font-size: smaller;
+    text-decoration: none;
+    color: var(--color-button-ios);
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.attribution a:hover::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    content: "\f0a9";
+    font-size: 14px;
+    padding: 0 8px;
+}
+
+
+/*! end Attribution */
+@media screen and (max-width:995px) {
+    .footer_text {
+        display: block;
+        margin-left: -20%;
+    }
+}
+
+@media screen and (max-width:775px) {
+    .footer {
+        margin-top: 160px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+    }
+
+    .footer_text {
+        margin: 20px 0;
+        display: block;
+    }
+
+    .footer_text_first,
+    .footer_text_second {
+        display: block;
+    }
+
+    .link {
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .footer_icon {
+        padding-bottom: 20px;
+    }
+}
+
+/* end footer */
